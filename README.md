@@ -12,6 +12,5 @@ The paper of GAN is [here](url)
 
 ## Prerequisition
 
- Python 3.6
- 
- [Tensorflow 1.0.1](https://github.com/tensorflow/tensorflow/tree/r0.12)
+- Python 3.6
+- [Tensorflow 1.0.1](https://github.com/tensorflow/tensorflow/tree/r0.12)
