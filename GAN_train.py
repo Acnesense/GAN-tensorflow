@@ -98,9 +98,6 @@ def main():
                 train_fake_batch = np.random.uniform(-1., 1., size=[batch_size, noise_dim])
                 train_data_batch, _ = mnist.train.next_batch(batch_size)
                 _, d_loss = sess.run([disc_train_step, disc_loss], feed_dict={gen_input : train_fake_batch, disc_input : train_data_batch})
-                
-            for j in range(int(mnist.train.num_examples / batch_size)):
-                train_fake_batch = np.random.uniform(-1., 1., size=[batch_size, noise_dim])
                 _, g_loss = sess.run([gen_train_step, gen_loss], feed_dict={gen_input : train_fake_batch})
 
 
@@ -109,7 +106,7 @@ def main():
             if i % 5 == 0:
                 samples = sess.run(gen_output, feed_dict={gen_input : np.random.uniform(-1., 1., [64, noise_dim])})
                 fig = plot(samples)
-                plt.savefig('generated_output_1/%s.png' % str(num_img).zfill(3), bbox_inches='tight')
+                plt.savefig('generated_image/%s.png' % str(num_img).zfill(3), bbox_inches='tight')
                 num_img += 1
                 plt.close(fig)
 
