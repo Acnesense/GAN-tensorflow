@@ -14,3 +14,16 @@ The paper of GAN is [here](url)
 
 - Python 3.6
 - [Tensorflow 1.0.1](https://github.com/tensorflow/tensorflow/tree/r0.12)
+
+## Run
+    $ python3 GAN_train.py
+
+## Result
+All results are randomly sampled.
+
+*Name* | *Epoch 1* | *Epoch 50* | *Epoch 100* | *Epoch 200*
+:---: | :---: | :---: | :---: | :---: |
+GAN | <img src = 'generated_image/000.png' height = '230px'> | <img src = 'generated_image/010.png' height = '230px'> | <img src = 'generated_image/020.png' height = '230px'> | <img src = 'generated_image/039.png' height = '230px'>
+
+
+
