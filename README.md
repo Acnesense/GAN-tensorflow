@@ -10,3 +10,8 @@ The paper of GAN is [here](url)
  
                                         GAN의 학습 과정 원리 <출처: 네이버랩스> 
 
+## Prerequisition
+
+ Python 3.6
+ asdf
+ [Tensorflow 1.0.1](https://github.com/tensorflow/tensorflow/tree/r0.12)
