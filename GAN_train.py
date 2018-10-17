@@ -95,10 +95,12 @@ def main():
         for i in range(epoch):
 
             for j in range(int(mnist.train.num_examples / batch_size)):
-        
-                train_data_batch, _ = mnist.train.next_batch(batch_size)
                 train_fake_batch = np.random.uniform(-1., 1., size=[batch_size, noise_dim])
+                train_data_batch, _ = mnist.train.next_batch(batch_size)
                 _, d_loss = sess.run([disc_train_step, disc_loss], feed_dict={gen_input : train_fake_batch, disc_input : train_data_batch})
+                
+            for j in range(int(mnist.train.num_examples / batch_size)):
+                train_fake_batch = np.random.uniform(-1., 1., size=[batch_size, noise_dim])
                 _, g_loss = sess.run([gen_train_step, gen_loss], feed_dict={gen_input : train_fake_batch})
 
 
