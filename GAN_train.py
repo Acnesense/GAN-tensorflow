@@ -2,6 +2,10 @@ import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
+import os
+
+if os.environ.get('DISPLAY', '')== '':
+    plt.switch_backend('agg')
 
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("data/", one_hot=True)
